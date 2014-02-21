@@ -1,0 +1,21 @@
+# Project Euler Q1
+
+def sumMultiples(highest):
+    multiples = [] # initialise array to store multiples
+    base = [3, 5] # find multiples of these numbers
+    for number in base:
+        i = 0
+        while True:
+            i += number
+            if i not in multiples and i < highest:
+                print(i)
+                multiples.append(i)
+            elif i >= highest:
+                break
+    j = 0
+    for multiple in multiples:
+        j += multiple
+
+    return(j)
+
+print(sumMultiples(1000))

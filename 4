@@ -1,0 +1,17 @@
+# Project Euler Q4
+
+def largestPalindrome(a, b):
+    largest = 0 # initialise variable for largest palindrome
+    for i in range(1, a + 1):
+        for j in range(1, b + 1):
+            number = i * j
+            palindrome = True # assume number is palindrome
+            length = len(str(number))
+            for k in range(0, int(length / 2)):
+                if str(number)[k] != str(number)[-(k+1)]:
+                    palindrome = False
+            if palindrome and number > largest:
+                largest = number
+    return(largest)
+
+print(largestPalindrome(999,999))

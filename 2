@@ -1,0 +1,12 @@
+# Project Euler Q2
+
+def evenFibonacci(highest):
+    i, j = 1, 2 # initialise variables for last two numbers in sequence
+    total = 0 # initialise variable for sum of even numbers in sequence
+    while j <= highest:
+        if j % 2 == 0:
+            total += j
+        i, j = j, i + j
+    return(total)
+
+print(evenFibonacci(4000000))    
